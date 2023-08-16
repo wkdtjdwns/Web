@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML's Group-2</title>
+    <style>
+        .p1, .p2
+        {
+            background-color: yellow;
+            color: red;
+        }
+
+        .p3, .p4
+        {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        그룹을 짓지 않았을 때 이런 식으로 코드가 너무 복잡해짐
+        -> 그룹을 지어야하는 이유
+    -->
+    <p style="background-color: yellow; color: red;">영화 소개<br><br>영화를 소개하는 페이지입니다.</p>
+    <p TV style="background-color: black; color: white;">TV 프로그램 소개<br><br>TV 프로그램을 소개하는 페이지입니다.</p>
+
+
+    <!-- 아니면 클래스를 하나하나 모두 만들어 줘야함 -> 비효율적임 -->
+    <p class="p1">영화 소개</p>
+    <p class="p2">영화를 소개하는 페이지입니다.</p>
+    <p class="p3">TV 프로그램 소개</p>
+    <p class="p4">TV 프로그램을 소개하는 페이지입니다.</p>
+</body>
+</html>
