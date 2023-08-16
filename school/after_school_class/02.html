@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML's Group</title>
+    <style>
+        /* .클래스명 : 설정해 놓았던 클래스명을 가져와서 설정하게 해줌 */
+        .movie
+        {
+            background-color: yellow;
+            color: red;
+        }
+
+        .tv
+        {
+            background-color: black;
+            color: white;
+        }
+
+        /* movie 클래스의 자식인 <span> 태그를 가져옴 */
+        .movie span 
+        {
+            background-color: aquamarine;
+            color: coral;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 웹페이지를 만들 때 관련 있는 요소끼리 그룹으로 묶으면 레이아웃을 구성하기 쉬워지고, HTML페이지의 구조를 조금 더 깔끔하게 작성할 수 있음
+    
+    HTML에서 이런 그룹짓기작업을 <div> 태그와 <span> 태그로 수행함
+
+    이 때, <div> 태그와 <span> 태그를 "공간 분할 태그"라고도 함 -->
+
+    <!-- <div>태그 : 블록 요소와 인라인 요소를 그룹으로 묶을 때 사용함 -->
+    <!-- <span> 태그 : 인라인 요소를 그룹으로 묶을 때 사용함 -->
+
+    <!-- 그룹짓기작업 X -->
+    <p>영화 소개</p>
+    <p>영화를 소개하는 페이지입니다.</p>
+    <p>TV 프로그램 소개</p>
+    <p>TV 프로그램을 소개하는 페이지입니다.</p>
+
+    <br>
+
+    <!-- 그룹짓기작업 O -->
+    <div class="movie">
+        <p>영화 소개</p>
+        <p>영화를 소개하는 페이지입니다.</p>
+        <p>이번 영화의 하이라이트 장면은 <span>추격신</span>입니다.</p>
+    </div>
+
+    <div class="tv">
+        <p>TV 프로그램 소개</p>
+        <p>TV 프로그램을 소개하는 페이지입니다.</p>
+    </div>
+
+    <!-- 
+        보이는 화면으로는 똑같지만 어떤 코드인지 확실히 알 수 있음 
+        또한 작업을 하기도 쉬워짐
+    -->
+    
+</body>
+</html>
