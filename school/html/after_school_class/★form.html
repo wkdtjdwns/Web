@@ -1,0 +1,56 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>★form 태그★</title>
+</head>
+<body>
+    <!-- 
+        <form> 태그
+        HTML에서 사용자와 상호작용해서 정보를 입력받고 서버로 전송하기 위한 양식임
+        -> HTML의 form을 구성하는 모든 태그는 <form> 태그 안에 작성해야 함
+
+        백 엔드도 참여해야할 정도의 웹 페이지, 정보처리산업기사 시험에도 나옴
+
+        프론트 엔드보단 백 엔드에서 더 중요함
+    -->
+
+    <!-- 사용법 -->
+
+    <!-- 
+        action 속성 (★필수) : form에 작성된 데이터를 옮길 장소 (임의로 #을 적어둘 수 있음)
+        method 속성 : (get (주소 표시) 또는 post (주소 표시가 아닌 다른 어딘가) 를 사용할 수 있음)
+    -->
+    <form action="05.html" method="get">
+
+        <!-- <input> 태그로 입력 받기 -->
+        type="text" <br>
+        <input type="text"></input><br><br>
+        
+        type="password" <br>
+        <input type="password"></input><br><br> <!-- password 속성으로 입력을 가릴 수 있음 -->
+        
+        type="tel" <br>
+        <input type="tel"></input><br><br>
+
+        type="number" <br>
+        <input type="number"></input><br><br>
+        
+        type="url" <br>
+        <input type="url"></input><br><br>
+
+        <!-- button과 submit, reset 타입은 value 속성을 사용해야 함 -->
+        type="button" <br>
+        <input type="button" value="버튼"><br><br></input>
+
+        type="reset" <br>
+        <input type="reset" value="리셋"><br><br></input>
+
+        type="submit" <br>
+        <input type="submit" value="전송"><br><br></input>
+
+    </form>
+
+</body>
+</html>
