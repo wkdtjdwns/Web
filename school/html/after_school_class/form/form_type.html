@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>type 속성</title>
+</head>
+<body>
+    <p>text : <input type="text" name="" id=""></p> <!-- 가장 기본적임 -->
+    <p>password : <input type="password" name="" id=""></p>
+    <p>tel : <input type="tel" name="" id=""></p> <!-- 입력은 모두 할 수 있으나 유효성 검사할 때 용이 하게 사용 가능 -->
+    <p>number : <input type="number" name="" id=""></p>
+    <p>url : <input type="url" name="" id=""></p> <!-- 입력은 모두 할 수 있으나 나중에 작업이 필요함 -->
+    <p>search : <input type="search" name="" id=""></p> <!-- 입력 전체 지우기 기능 -->
+    <p>email : <input type="email" name="" id=""></p> <!-- 입력은 모두 할 수 있으나 나중에 작업이 필요함 -->
+    
+    <!-- 산업기사시험에 자주 나옴 -->
+    <p>checkbox : <input type="checkbox" name="" id=""></p>
+    <p>radio : <input type="radio" name="" id=""></p> <!-- 혼자서는 사용 불가 -->
+
+    <!-- 도제 시험에도 나올 수 있음 (산업기사시험에도 나올 수 있음) -->
+    <p>file : <input type="file" name="" id=""></p>
+
+    <!-- 함께 나옴 -->
+    <p>button : <input type="button" value="버튼"></p>
+    <p>submit : <input type="submit" value="전송"></p>
+
+    <p>image : <input type="image" src="images/beach.jpg" alt="beach"></p>
+    <p>hidden : <input type="hidden" name=""></p> <!-- 사용자에겐 보이지 않지만 개발자는 접근 할 수 있음 -->
+    <p>date : <input type="date" name="" id=""></p>
+    <p>datetime-local : <input type="datetime-local" name="" id=""></p> <!-- local : 해당 지역의 시간을 가져옴 -->
+    <p>month : <input type="month" name="" id=""></p>
+    <p>week : <input type="week" name="" id=""></p>
+    <p>time : <input type="time" name="" id=""></p>
+    <p>range : <input type="range" name="" id=""></p>
+    <p>color : <input type="color" name="" id=""></p>
+    <p>reset : <input type="reset" value="리셋"></p> <!-- 해당 폼 안에 있는 모든 값을 초기화 함 -->
+
+    <!--
+        name | id 속성 (변수명과 비슷함)
+            입력 요소의 이름을 작성함 (두 속성의 값은 서로 같은 값으로 작성함)
+            입력 요소가 <form> 태그에 의해 서버로 전송될 때, name 속성에 적힌 값이 이름으로 지정됨
+            서버에서는 지정된 이름으로 입력 요소를 식별할 수 있음
+    -->
+
+    <!-- 
+        text 속성의 값을 "홍길동"이라고 적고나서 전송 버튼을 누르면 "stuName"이라는 변수에 "홍길동"이라는 값이 저장된 채로 전송됨
+    -->
+    <input type="text" name="stuName" id="">
+    <input type="submit" value="전송">
+
+    <!-- 
+        value 속성
+            입력 요소의 초기값을 작성함
+            대채로 입력요소는 사용자에게 수동으로 값을 입력받지만, 상황에 따라 초기값을 설정해야 하는 상황이 있음
+    -->
+</body>
+</html>
