@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>라벨 붙이기</title>
+</head>
+<body>
+    <!-- 
+        중요! ★ 웹 접근성 ★
+            웹의 기본이념 : 모든 사람이 차별없이 동일한 사용자 경험을 하는데 목적이 있음
+            즉, 웹을 이용할 때는 장애인, 비장애인, 고령자, 젊은 세대와의 차별 없이 동등하게 웹에 접근할 수 있고 이용할 수 있도록 보장해야 함
+    -->
+
+
+    <!-- case 1 -->
+    <label>
+        아이디 <!-- 아이디를 입력하는 text라는 것을 알려주기 위함 -->
+        <input type="text" name="" id="">
+    </label>
+
+    <br>
+
+    <!-- case 2 -->
+    <!-- <label> 끼리 묶기 -->
+    <label for="pw">비밀번호</label> <!-- id가 "pw"인 애들만 묶음 -->
+    <input type="password" id="pw">
+
+    <br>
+
+    <!-- case 3 -->
+    <label for="name">
+        이름
+        <input type="text" name="" id="name">
+    </label>
+
+    <!-- 
+        <p> 태그와의 차이점
+            <label> 태그는 <p> 태그와 달리 시각장애인들을 배려할 수 있음
+    -->
+</body>
+</html>
