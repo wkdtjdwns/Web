@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+</head>
+<body>
+    <!-- 
+        <select> 태그 : 콤보 박스를 생성함
+    -->
+
+    <select name="city" id="city">
+        <!-- option value : 서버로 전송 될 값 | <option> 태그 사이의 값 : 웹페이지에 보여지는 값 -->
+        <option value="01">서울</option>
+        <option value="07">성남</option>
+        <option value="10">수원</option>
+        <option value="25">삼척</option>
+        <option value="50">제주</option>
+    </select>
+
+    <!-- multiple 속성은 여러값을 선택할 수 있게 해줌 | 잘 사용하지 않음 -->
+    <select name="city2" id="city2" size="1">
+        <!-- selected 속성 : 해당 값이 맨 위로 오게 함 -->
+        <option value="none" selected> == 도시선택 ==</option>
+
+        <!-- <optgroup> 태그 : 비슷한 <option> 태그들을 모아두기 위한 태그 -->
+        <optgroup label="서울시">
+            <option value="01-1">강북구</option>
+            <option value="01-3">강남구</option>
+            <option value="01-7">관악구</option>
+            <option value="01-9">중원구</option>
+        </optgroup>
+        <optgroup label="성남시">
+            <option value="07-1">분당구</option>
+            <option value="07-2">중원구</option>
+            <option value="07-5">수정구</option> 
+        </optgroup>
+    </select>
+</body>
+</html>
