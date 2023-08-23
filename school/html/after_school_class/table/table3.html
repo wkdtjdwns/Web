@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 그룹짓기</title>
+</head>
+<body>
+    <!-- 
+        <thead>, <tfoot>, <tbody> 태그
+            표에서 행을 묶어서 그룹화할 때 사용함
+
+            <thead> 태그 : 해더 영역에 해당하는 행 -> 반드시 <th> 태그로 열을 생성해야함
+            <tfoot> 태그 : 푸터 영역에 해당하는 행 -> 표의 맨 아래로 내려감
+            <tbody> 태그 : 본문 영역에 해당하는 행
+
+            특징
+                무조건 <thead> -> <tfoot> -> <tbody>의 순서로 작성해야 함
+
+                <thead>, <tfoot> 태그는 딱 한번만 사용 가능함
+
+            사용 이유 : 웹 접근성을 향상시키기 위함
+    -->
+
+    <table border="1">
+        <tr>
+            <!-- 해더 (thead) 영역 -->
+            <thead>
+                <th>번호</th>
+                <th>상품명</th>
+                <th>수량</th>
+                <th>가격</th>
+            </thead>
+        </tr>
+
+        <!-- 푸터 (tfoot) 영역 -->
+        <tfoot>
+            <tr>
+                <td>총 금액</td>
+                <td colspan="3">6,500원</td>
+            </tr>
+        </tfoot>
+
+        <!-- 본문 (tbody) 영역 -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>콜라</td>
+                <td>1개</td>
+                <td>1,500원</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>사이다</td>
+                <td>2개</td>
+                <td rowspan="2">1,000원</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>탄산수</td>
+                <td>3개</td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>
