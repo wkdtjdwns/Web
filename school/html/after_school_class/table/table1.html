@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블</title>
+</head>
+<body>
+    <!-- 
+        프론트 개발자가 자주 사용함
+
+        <table> 태그
+            HTML에서 표를 생성할 때 사용함 (프론트에서 자주 사용함)
+
+            표에 관련된 모든 태그는 <table> 태그 안에서 사용해야 함
+    -->
+
+    <!-- 아래처럼 테이블 제목을 <p> 태그를 사용해서 나타내면 웹 접근성에 위반됨 그래서 <caption> 태그를 사용해야함 -->
+    <p>테이블제목</p>
+    <table border="1"></table>
+
+    <!-- 
+        1. <caption> 태그
+            표의 제목을 지정하는 태그임
+
+            웹 접근성을 향상할 수 있음
+    -->
+
+<!-- 
+    잘못된 예시
+
+    <caption>테이블제목</caption>
+    <table></table>
+
+    잘못된 이유 : 표에 관련됨 모든 태그는 <table> 태그 안에서 사용해야 함
+    -->
+
+    <!-- 올바른 예시 -->
+
+    표가 너무 작아서 이상하게 나오는 것임
+    <table>
+        <caption>테이블제목</caption>
+    </table>
+
+    <!-- 
+        2. <tr> (table row) 태그
+            표에서 행을 생성하는 태그임
+
+            <tr> 태그는 행을 단 한개 생성하기 때문에 여러 행을 만들고 싶으면 <tr> 태그를 여러번 사용해야 함
+    -->
+
+    <table border="1">
+        <tr></tr>
+    </table>
+
+    <!-- 
+        산업기사에서 자주 나옴
+
+        3. <th> (table header), <td> (table data) 태그
+            <th> 태그 : 표에서 제목을 나타내는 열을 생성할 때 사용함 (글씨는 가운데정렬, 굵게해서 나타낸다)
+
+            <td> 태그 : 표에서 일반적인 데이터를 나타내는 열을 생성할 때 사용함
+    -->
+
+    <table border="1">
+        <th>제목</th>
+        <td>내용</td>
+    </table>
+    
+    <table border="1">
+        <tr>
+            <th>학년</th>
+            <th>반</th>
+            <th>번호</th>
+            <th>이름</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>11</td>
+            <td>01</td>
+            <td>홍길동</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>11</td>
+            <td>02</td>
+            <td>장발장</td>
+        </tr>
+    </table>
+</body>
+</html>
