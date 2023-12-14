@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // String 변수에서 가능한 것들 (굉장히 자주 사용함)
+
+        // 문자열 함수는 대체적으로 앞 숫자는 포함하고 뒷 숫자는 미포함함 (참고)
+        let theText = "Sungil Information High School"; // String
+        document.write(theText + "<br>");
+        document.write(theText.bold() + "<br>"); // 굵게
+        document.write(theText.link("http://www.sungil-i.kr") + "<br>"); // 링크 달기
+        document.write(theText.toLowerCase() + "<br>"); // 전부 소문자로 변환하기
+        document.write(theText.toUpperCase() + "<br>"); // 전부 대문자로 변환하기
+        document.write(theText.substring(7, 18) + "<br>"); // 7 ~ 18 사이의 인덱스에 위치하는 글자
+        document.write(theText.substr(7, 18) + "<br>"); // 7번째 부터 18개 출력
+        document.write(theText.indexOf("H") + "<br>"); // 매개변수의 글자의 위치 (int)
+        document.write(theText.lastIndexOf("n") + "<br>"); // 매개변수의 글자가 마지막으로 나온 위치 (int)
+        document.write(theText.charAt(5) + "<br>"); // n번째 글자 (char)
+        document.write(theText.length + "<br>"); // 해당 문자열의 길이 (int)
+        document.write(theText.replace("High", "Middle") + "<br>"); // High를 Middle로 바꿈
+        document.write(theText.slice(7, 9) + "<br>"); // 문자열의 일부를 추출하여 새로운 문자열 반환 (String)
+        document.write(theText.concat(" Fighting") + "<br>"); // 매개변수의 글자를 합침
+        document.write(theText.split(" ") + "<br>"); // 매개변수의 값에 따라서 문자열 분할 (정말 자주 쓰임)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
