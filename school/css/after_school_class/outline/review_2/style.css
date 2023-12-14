@@ -1,0 +1,23 @@
+ul, li { list-style: none; }
+
+a
+{
+    color: black;
+    font-family: 굴림;
+    font-size: 20px;
+    background-color: yellow;
+    text-decoration: none;
+    /* 줄간격 */
+    line-height: 36px;
+}
+
+/* 마우스를 올렸을 때 적용할 서식 */
+a:hover
+{
+    color: red;
+    font-size: 궁서;
+    font-weight: bold;
+    background-color: pink;
+    /* 텍스트에 밑줄 추가 */
+    text-decoration: underline;
+}
