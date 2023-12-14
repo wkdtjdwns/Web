@@ -1,0 +1,63 @@
+/* 글꼴 불러오기 (요즘은 대부분 구글 폰트를 받아와서 사용함 - 폰트가 없는 상황을 방지하기 위함) */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+ul, li
+{
+    list-style: none;
+}
+
+body
+{
+    font-size: 15px;
+
+    /* 받아온 글꼴 사용 */
+    font-family: Monoton;
+}
+
+#gnb li
+{
+    /* 블록요소를 인라인요소로 바꾸기 */
+    display: inline;
+    /* float: left; 도 똑같은 효과를 낼 수 ㅣㅇㅆ음 */
+}
+
+#gnb li a
+{
+    /*
+        인라인요소인 <a> 태그를 인라인요소와 블록요소를 모두 가지게 함
+        정리 : 인라인요소이지만 높이값과 너비값을 가지게 함
+    */
+    display: inline-block;
+
+    background: #c00;
+    color: #fff;
+
+    /* 단축키 - w150 */
+    width: 150px;
+
+    /* 단축키 - h40 */
+
+    /* ★height의 값과 line-height의 값이 같다면 세로 가운데 맞춤이 됨 */
+    height: 40px;
+    line-height: 40px;
+
+    /* 가운데 맞춤 */
+    text-align: center;
+
+    text-decoration: none;
+
+    /* ★hover 속성이 적용될 때까지 0.5초 걸리게 함★ */
+    transition: all 0.5s;
+}
+
+#gnb li a:hover
+{
+    background: #369;
+    text-decoration: underline;
+}
