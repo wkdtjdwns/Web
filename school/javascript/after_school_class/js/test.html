@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 문제
+        // 지역번호 (서울 = 02, 경기 = 031, 강원 = 033, 부산 = 051)
+
+        // myArea 라는 변수의 프롬프트에 지역을 입력하면, areaNum 이라는 변수에 해당되는 지역번호를 저장함 후 출력
+        // 서울, 경기, 강원, 부산 외 지역을 입력하면 "등록되지 않은 지역입니다." 를 출력함
+
+        // 풀이
+        let myArea = prompt("지역을 입력하시오.", "서울"); // String
+        let areaNum; // String
+        
+        switch (myArea)
+        {
+            case "서울":
+                areaNum = "02";
+                break;
+                
+            case "경기":
+                areaNum = "031";
+                break;
+                
+            case "강원":
+                areaNum = "033";
+                break;
+                
+            case "부산":
+                areaNum = "051";
+                break;
+
+            default:
+                alert("등록되지 않은 지역입니다.")
+        }
+        
+        document.write(myArea + "의 지역 번호는 " + areaNum);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
