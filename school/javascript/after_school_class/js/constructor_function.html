@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 재활용하기 (java의 클래스처럼)
+
+        // 생성자 함수
+        // - 특정 속성과 메소드를 가진 객체를 생성할 수 있음 (클래스를 만들지 않을 뿐 생성자를 가져와서 쓰는 것)
+        // - 속성과 관련 메소드를 직접 사용자가 정의하여 함수화하고 이후 new 연산자를 사용하여 해당 함수명을 호출하면
+        //   미리 정의된 속성과 메소드를 지닌 새로운 객체를 만들 수 있음
+
+        // 파라미터가 3개인 생성자 함수를 생성
+
+        // 자바스크립트에서는 필드 값을 따로 선언할 필요가 없음
+        // this.를 사용해서 저장함
+        // 생성자 함수에서 필드값과 메소드를 만드는 것임
+        // this. -> 변수 값
+        // function() -> 메소드
+        function comFactory(cpuInfo, ramInfo, hddInfo)
+        {
+            this.cpu = cpuInfo;
+            this.ram = ramInfo;
+            this.hdd = hddInfo;
+
+            this.totInfo = function() // totInfo() 라는 이름의 메소드
+            {
+                document.write("제조업체 : 성일전자 <br>");
+                document.write("시스템 종류 : 64bit Os <br>");
+            }
+        }
+        // 위에 코드로 클래스를 하나 만든 것임
+
+        // new 연산자를 사용하여 새 객체를 생성하였으며, 객체명으로 gamingCom을 부여함
+        let gamingCom = new comFactory("5.0GHZ", "32.0GB", "1TB"); // comFactory
+        document.write(gamingCom.cpu + "<br>");
+        document.write(gamingCom.ram + "<br>");
+        gamingCom.totInfo();
+
+        let officeCom = new comFactory("3.2GHZ", "8.0GB", "512GB"); // comFactory
+        document.write(officeCom.cpu + "<br>");
+        document.write(officeCom.ram + "<br>");
+        officeCom.totInfo();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
