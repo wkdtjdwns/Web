@@ -1,0 +1,65 @@
+/* 
+    reset - 웹에서 주는 기본적인 설정이 맘에 들지 않을 때 내가 다시 설정하는 것
+
+    예시 
+        - margin: 0;
+        - padding: 0;
+        - <a> 태그의 text-decoration
+        - <a> 태그의 color
+        - <li> 태그의 list-style
+        - 등등
+*/
+
+* /* 전체 선택자 */
+{
+    /* 모든 여백 제거 - 모든 페이지를 만들 때 무조건 실행시킴 */
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+ul, li
+{
+    list-style: none;
+}
+
+body
+{
+    /* font: 뒤에 모든 속성을 적용시킬 수 있음 */
+
+    /* "돋움", Gulim -> 앞에 있는 글꼴이 없을 때 차선책으로 뒤에 있는 글꼴이 출력됨 */
+    font: 12px "돋움", Gulim;
+    width: 300px;
+    margin: 10px;
+    /* border: 1px solid red; */
+}
+
+h1
+{
+    /* 높이값과 너비값 같은 것을 삭제시킴 -> 블록요소를 인라인요소와 붙일 수 있음 */
+    /* 왼쪽 끝으로 붙임 */
+    float: left;
+    font-size: 200%;
+    background: #c00;
+    padding: 5px;
+    color: #fff;
+}
+
+p span
+{
+    /* 오른쪽 끝으로 붙임 */
+    float: right;
+    font-size: 250%;
+    border: 3px dotted orange;
+}
+
+p
+{
+    /* 텍스트의 끝줄을 맞춰줌 */
+    text-align: justify;
+}
