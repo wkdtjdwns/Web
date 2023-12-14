@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function theFnc() { alert("JavaScript!!!"); }
+
+        function clickBtn()
+        {
+            let myBtn = document.getElementById("btn1"); // button
+            myBtn.onclick = theFnc;
+        }
+
+
+        function clickBtn2()
+        {
+            let myBtn2 = document.getElementById("btn2"); // button
+            myBtn2.onclick = theFnc;
+        }
+
+        // 함수를 Listener를 이용해서 연결시킴
+        if (window.addEventListener) // 표준 방식 브라우저는 가능하지만 비표준 방식 브라우저는 불가능함
+        {
+            window.addEventListener("load", clickBtn, false);
+            window.addEventListener("load", clickBtn2, false);
+        } // 비표준 방식 브라우저 (EI 8 이하) -> 거의 없음
+
+        // 원래는 else if 를 사용해야함
+        else if (window.attachEvent)
+        {
+            window.attachEvent("load", clickBtn, false);
+            window.attachEvent("load", clickBtn2, false);
+        }
+    </script>
+</head>
+<body>
+    <button id = "btn1">버튼1</button>
+    <button id = "btn2">버튼2</button>
+</body>
+</html>
