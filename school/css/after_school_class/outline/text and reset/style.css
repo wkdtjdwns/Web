@@ -1,0 +1,43 @@
+.school
+{
+    /* 텍스트 들여쓰기 */
+    text-indent: 30px;
+
+    /* 철자(글자) 사이의 간격 */
+    letter-spacing: 20px;
+}
+
+p
+{
+    /* 철자의 첫 글자만 대문자로 바꿈 - 공백(띄어쓰기)로 구별함 (영어 한정) */
+    text-transform: capitalize;
+    /*
+        lowercase - 전부 소문자로 바꿈
+        upper - 전부 대문자로 바꿈
+    */
+}
+
+
+/* 페이지를 만들 때 적용하는 기본적인 설정들 */
+a /* ul>li 같은 것들도 포함 */
+{
+    text-decoration: none;
+    color: #000;
+}
+
+body
+{
+    background-color: #ddd;
+    font-family: 돋움;
+    font-size: 20px;
+}
+
+* /* 페이지를 만들면 무조건 적용하는 것 */
+{
+    /* 여백들을 제거함 */
+    /* 태그와 태그와의 여백 */
+    margin: 0;
+
+    /* 태그의 안쪽 여백 */
+    padding: 0;
+}
