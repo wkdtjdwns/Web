@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Date 클래스 (현재 날짜/시간 정보 출력하기)
+
+        document.write("<h1>현재 날짜/시간 정보</h1>")
+
+        let today = new Date(); // 인스턴스 화 (Date 타입)
+        let nowMonth = today.getMonth() + 1; // int (0 ~ 11로 데이터를 저장함 -> 0부터 시작해서 + 1을 해줘야 함)
+        let nowDate = today.getDate(); // int (얘는 1 ~ 31로 데이터를 저장함 -> + 1을 해줄 필요 X)
+        let nowDay = today.getDay(); // int (요일 -> 0:일요일 ~ 6:토요일로 데이터를 저장함 -> 코드가 따로 필요함)
+        let nowHours = today.getHours(); // int
+        let nowMinutes = today.getMinutes(); // int
+        let nowseconds = today.getSeconds(); // int
+        let nowTime = today.getTime(); // 1970년 1월 1일부터 경과된 시간 (잘 안 쓰임)
+
+        // 요일을 int형이 아닌 String형으로 나오도록 하기 (3 -> 수, 6 -> 토)
+        let nowDayKor = null; // String이 될 예정
+        switch (nowDay)
+        {
+            case 0:
+                nowDayKor = "일";
+                break;
+                
+            case 1:
+                nowDayKor = "월";
+                break;
+                
+            case 2:
+                nowDayKor = "화";
+                break;
+                
+            case 3:
+                nowDayKor = "수";
+                break;
+                
+            case 4:
+                nowDayKor = "목";
+                break;
+                
+            case 5:
+                nowDayKor = "금";
+                break;
+                
+            case 6:
+                nowDayKor = "토";
+                break;
+        }
+
+        document.write("현재 달 = " + nowMonth + "월 <br>");
+        document.write("현재 일 = " + nowDate + "일 <br>");
+        document.write("현재 요일 = " + nowDay + "요일 <br>");
+        document.write("현재 요일 = " + nowDayKor + "요일 <br>");
+        document.write("현재 시각 = " + nowHours + "시 <br>");
+        document.write("현재 분 = " + nowMinutes + "분 <br>");
+        document.write("현재 초 = " + nowseconds + "초 <br>");
+        document.write("1970년 1월 1일부터 경과된 시간 = " + nowTime + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
