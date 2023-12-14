@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // script에서 버튼에 함수 적용시키기
+
+        function theFnc() { alert("JavaScript!!!"); }
+
+        // document -> body 태그의 요소
+
+        // 아래의 코드는 버튼이 생성되기 전에 실행이 되어버려서 실행이 되지 않음
+        // let myBtn = document.getElementById("btn1"); // button
+        // myBtn.onclick = theFnc;
+        // -> 페이지가 모두 생성되고 나서 실행시켜야함
+
+        // DOM Level 0
+        // 객체에 이벤트를 직접 연결해서 작동하게 하는 고전적인 방식
+        // 한 객체에 동시에 같은 이벤트를 2번 이상 적용할 수 없다는 문제점이 있음
+        // 한 객체에 같은 이벤트를 2번 이상 적용하게 되면 제일 마지막에 적용된 이벤트만 실행됨
+        window.onload = function()
+        {
+            let myBtn = document.getElementById("btn1"); // button
+            myBtn.onclick = theFnc;
+        }
+
+
+        window.onload = function()
+        {
+            let myBtn2 = document.getElementById("btn2"); // button
+            myBtn2.onclick = theFnc;
+        }
+
+        // DOM?
+        // - "Document Object Model", '문서 객체 구조"
+        // - 웹 브라우저에서 일어나는 모든 행동을 '이벤트(event)'라고 함 (onclick -> 클릭 이벤트 발생)
+        // - 특정 이벤트가 발생하는 시점에서 함수를 호출하거나 스크립트를 실행하게 하는데,
+        // - 이러한 요소를 '이벤트 핸들러' 라고 함. (핸들 : 이벤트와 함수를 조정시켜주는 것)
+
+        // 이벤트 종류
+        // - onload : 문서를 모두 불러오고 나서 발행
+        // - onunload : 문서를 종료할 때 발행
+        // - ondbclick : 대상을 더블 클릭했을 때 발생
+        // - onclick : 대상을 클릭 했을 때 발생
+        // - onkeypress (onkeydown) : 키보드를 눌렀을 때 발생
+        // - onkeyup : 키보드를 누르고 때었을 때 발생
+        // - onmouseover : 대상에 마우스를 올렸을 때 발생
+        // - onfocus : 대상에 포커스가 생겼을 때 발생
+        // - onmouseout : 마우스가 대상에게서 벗어났을 때 발생
+        // - onblur : 대상에서 포커스를 잃었을 때 발생
+        // - onsubmit : 전송(submit) 버튼을 눌렀을 때 발생
+        // - onreset : 취소(reset) 버튼을 눌렀을 때 발행
+        // - onchange : 입력요소의 값이 바뀌고, 포커스가 옮겨졌을 때 발생
+        // - onmousemove : 마우스를 움직일 때마다 발생
+        // - onresize : 브라우저의 창을 조절할 때마다 발생
+        // - onerror : 문서나 이미지를 불러올 때 에러가 발생하면 발생
+        // - onbort : 문서를 불러오다가 중단되면 발생
+    </script>
+</head>
+<body>
+    <button id = "btn1">버튼1</button>
+    <button id = "btn2">버튼2</button>
+</body>
+</html>
