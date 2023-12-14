@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 스크립트 내에서 함수 호출하기
+        let num1 = 10; // int
+        function theFnc(num2) // int
+        {
+            let sum = num1 + num2; // int
+            let mul = num1 * num2; // int
+
+            return sum;
+            document.write("함수 내 리턴문 다음에 있는 실행문") // return을 만나는 순간 함수를 나가기 때문에 실행 되지 않음
+        }
+
+        let result = theFnc(40); // int
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
