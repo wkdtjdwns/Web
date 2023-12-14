@@ -1,0 +1,41 @@
+/* 가상 선택자 - css에서 html에 없는 가상 공간에 컨텐츠를 삽입할 수 있게 함*/
+.box::before /* after - 맨 처음에 삽입 */
+{
+    content: "MENU";
+}
+
+.box::after /* after - 맨 마지막에 삽입 */
+{
+    content: "항목을 선택해주세요";
+}
+
+/* <p> 태그의 첫 글자들 */
+p::first-letter
+{
+    font-size: 300%;
+    color: red;
+}
+
+p
+{
+    /* 밑줄 - 점선 */
+    border-bottom: 1px dashed #000;
+}
+
+/* p:first-child - <p> 태그의 첫번째 자식 */
+p:first-child::first-letter /* <p> 태그의 첫번째 자식의 첫글자 */
+{
+    color: blue;
+}
+
+/* p:nth-child(n) - <p> 태그의 n번째 자식 */
+p:nth-child(2)::first-letter /* <p> 태그의 두번째 자식의 첫글자 */
+{
+    color: violet;
+}
+
+/* p:last-child - <p> 태그의 마지막 자식 */
+p:last-child /* p:nth-child(3) */
+{
+    border: none;
+}
