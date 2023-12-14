@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 배열 기능
+        let theSubway = ["2호선", "9호선", "7호선", "4호선", "3호선"]; // String[]
+        let newLine1 = "1호선"; // String
+        let newLine2 = "분당선"; // String
+
+        theSubway.shift(); // 왼쪽으로 밀기 (2호선이 배열 밖으로 나감 -> 순환 X)
+        console.log(theSubway);
+        theSubway.unshift(newLine1); // 오른쪽으로 밀기 && newLine1(1호선) 삽입
+        console.log(theSubway);
+
+        let sub = theSubway.pop(); // 맨 마지막에 있는 값을 뽑아내고 나서 변수에 대입함
+        console.log(sub);
+        console.log(theSubway);
+
+        theSubway.push(newLine2); // 맨 마지막에 값을 추가함
+        console.log(theSubway);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
