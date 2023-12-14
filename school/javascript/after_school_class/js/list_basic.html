@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 배열 (중요)
+        document.write("<h1>Array(배열)</h1>");
+        let names = new Array(); // 배열도 [] 필요 없이 let 만 사용하면 됨 && 배열의 크기를 정할 필요도 없음 // String[]
+        names[0] = "홍길동";
+        names[1] = "장발장";
+        names[2] = "임꺽정";
+        names[3] = "로미오";
+        names[4] = "줄리엣";
+
+        // 출력 또한 자바와 같음
+        document.write(names[2] + "<br>");
+        document.write(names[4] + "<br>");
+
+        // 배열을 사용해서 Date 클래스에 있던 getDay() 함수와 같이 사용함
+        let days = new Array("일", "월", "화", "수", "목", "금", "토"); // 배열을 생성하면서 값 할당도 가능 // String[]
+        // document.write(days[3]);
+        let tdate = new Date();
+        let yoil = days[tdate.getDay()]; // String
+        document.write(yoil + "요일 <br>");
+
+        let money = [100, 100, 200, 50, 500] // new Array 없이 값 할당하기 // int[]
+        // 가정. 배열에 돈을 계속 추가하거나 삭제할 수 있음
+        // 토탈 금액을 구하시오.
+        let total = 0; // int
+        for (let index = 0; index < money.length; index++) { total += money[index]; }
+        document.write(total + "원 <br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
