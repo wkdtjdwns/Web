@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 엄청 유용하지만 애매해서 요즘은 사용하지 말자고 하는 추세임
+        // 엄청 유용하지만 보안, 속도, 많은 오류와 같은 문제가 생김
+
+        let result = "10+20"; // string
+        document.write(result + "<br>"); // 문자열이기 때문에 그대로 출력됨
+
+        // 웹에서는 int형 변수가 원치 않게 string 형이 될 때가 있음 -> eval() 사용
+        // 대표적으로 계산기에서 10+8*2/5+80*10 을 eval()로 묶어서 계산할 수도 있음
+        let result1 = eval("10+20");
+        document.write(result1 + "<br>");
+
+        let num = 100;
+        document.write("num" + 10 + "<br>");
+        document.write(eval("num") + 10 + "<br>");
+
+        // eval()을 사용하면 파라미터의 값을 변수로 취급함
+
+        // 해당 값이 숫자가 아닌지 맞는지 판단하기 -> isNaN() | 숫자가 아니면 false, 맞으면 true
+        // isNaN -> is Not a Number
+        let result2 = isNaN("kor");
+        document.write(result2 + "<br>"); // true
+        let result3 = isNaN("123");
+        document.write(result3 + "<br>"); // false
+        let result4 = isNaN(321);
+        document.write(result4 + "<br>"); // false
+
+        // 내장함수 : 자바스크립트에서 사용자의 편의를 위해 제공하는 함수
+
+        // 자주 사용하는 내장함수
+        // eval() : 문자열을 자바스크립트 문장으로 변환 (수식은 계산식으로, 문자는 변수로)
+        // parseInt() : 숫자를 정수로 변환
+        // parseFloat() : 숫자를 실수로 변환
+        // isNaN() : "Not a Number"의 약자로 숫자가 아닌 문자가 폼함되면 true를, 아니면 false를 반환
+        // isFinite() : 주어진 값이 유리수인지 판단
+        // Number() : 문자를 숫자형으로 변환
+        // String() : 숫자를 문자형으로 변환
+        // escape() : 문자를 16진수 아스키코드로 변환
+        // unescape() : escape()로 반환된 값을 다시 원래대로 되돌려 반환
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
