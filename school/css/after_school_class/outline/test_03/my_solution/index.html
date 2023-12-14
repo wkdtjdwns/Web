@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성일정보고 회원가입</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>성일정보고 회원가입</h1>
+    <table>
+        <caption>(*)표시는 <span>필수입력</span>사항입니다.</caption>
+        <tr>
+            <th><span>*</span>회원유형</th>
+            <td>학생</td>
+        </tr>
+        <tr>
+            <th><span>*</span>이름(성명)</th>
+            <td>홍길동</td>
+        </tr>
+        <tr>
+            <th><span>*</span>아이디</th>
+            <td>
+                <input type="text" name="id" id="id"> <br>
+                <p>6~15자의 영문소문자, 숫자만 가능합니다.</p>
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span>비밀번호</th>
+            <td>
+                <input type="password" name="password" id="password" maxlength="10"> <br>
+                <p>
+                    비밀번호는 <span>영대문자, 영소문자, 숫자, 특수문자의 조합</span>으로 이루어져야 합니다. <br>
+                    - 조합이 2종류 이상인 경우 10자리 이상, <br>
+                    - 조합이 3종류 이상인 경우 8자리 이상 가능합니다.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span>비밀번호 확인</th>
+            <td><input type="password" name="reconfirm_password" id="reconfirm_password"></td>
+        </tr>
+        <tr>
+            <th><span>*</span>성별</th>
+            <td>
+                <input type="radio" name="male" id="male">남
+                <input type="radio" name="female" id="female">여
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span>생년월일</th>
+            <td><input type="text" name="birth_date" id="birth_date" placeholder="YYYY/MM/DD"></td>
+        </tr>
+        <tr>
+            <th>관심분야</th>
+            <td>
+                <input type="checkbox" name="computer" id="computer">컴퓨터
+                <input type="checkbox" name="coding" id="coding">코딩
+                <input type="checkbox" name="robot" id="robot">로봇
+                <input type="checkbox" name="ai" id="ai">인공지능
+                <input type="checkbox" name="ar" id="ar">AR
+                <input type="checkbox" name="vr" id="vr">VR
+                <input type="checkbox" name="big_data" id="big_data">빅데이터
+                <input type="checkbox" name="game" id="game">게임
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span>이메일</th>
+            <td>
+                <input type="email" name="front_email" id="front_email">@<input type="email" name="back_email" id="back_email"> 
+                <select name="email_addres" id="email_addres">
+                    <option value="">Email 주소 선택</option>
+                    <option value="naver">naver.com</option>
+                    <option value="gmail">gmail.com</option>
+                    <option value="nate">nate.com</option>
+                </select>
+                <input type="submit" value="중복확인">
+                <p>
+                    비밀번호 분실시 이메일로 임시비밀번호가 발송됩니다. 반드시 정확히 입력해주세요. <br>
+                    ※ 다음(daum.net, hanmail.net) 메일계정을 사용하시면 정상적으로 받으실 수 없습니다.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th><span>*</span>본인소개</th>
+            <td>
+                <textarea name="about_me" id="about_me" cols="50" rows="15"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>사진 업로드</th>
+            <td>
+                <p>
+                    학생증에 사용할 증명사진을 올려주세요. <br>
+                    사진 파일은 <span>jpg, png, gif, bmp</span>만 가능합니다. <br>
+                </p>
+                <input type="file" name="id_photo" id="id_photo">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                학교 홈페이지에 가입하시겠습니까?
+                <button id="cancel">취소</button>
+                <button id="check">확인</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
