@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Docment</title>
+    <script>
+        // 형변환
+
+        // let kor = prompt("국어 점수는?", "0") 만 적으면 int 형이 아닌 String 형으로 자료를 받아오게 됨 -> 결과 값이 달라질 수 있음
+
+        // Number(값) -> 파라미터로 있는 값을 int 형으로 변환함
+        let kor = Number(prompt("국어 점수는?", "0")); // int
+        let eng = Number(prompt("영어 점수는?", "0")); // int
+        let math = Number(prompt("수학 점수는?", "0")); // int
+        
+        let avg = (kor + eng + math) / 3; // double
+        let result = avg >= 70 && kor >= 50 && eng >= 50 && math >= 50; // boolean
+
+        document.write(avg + "<br>");
+        document.write(result + "<br>")
+
+        // boolean 변수의 값을 true와 false가 아닌 pass와 fail로 표기하기
+        document.write( (result==true) ? "pass" : "fail" ); // 삼항연산자 사용!
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
