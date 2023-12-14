@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let theFood = ["짜장면", "냉면", "갈비탕", "돈까스", "삽겹살"] // String[]
+        console.log(theFood);
+
+        // 만약 역방향으로 출력하고 싶다면?
+        
+        // 라이브러리 미사용        
+        /*
+        let theFoodR = new Array();
+        for (let index = theFood.length - 1; index >= 0; index--) { theFoodR[4-index] = theFood[index]; }
+        console.log(theFoodR);
+        */
+
+        // 라이브러리 사용
+        theFood.reverse(); // 배열의 순서를 역순으로 바꿔서 재구성 해줌
+        console.log(theFood);
+
+        // 라이브러리를 사용하면 기능을 훨씬 더 간편하고 쉽게 구현할 수 있음
+
+        let theSubway = ["2호선", "9호선", "7호선", "4호선", "3호선"] // String[]
+        theSubway.sort(); // 배열의 오름차순 정렬
+        console.log(theSubway);
+
+        let mountain1 = ["남산", "도봉산", "관악산", "청계산", "북한산"]; // String[]
+        let mountain2 = ["설악산", "지리산", "한라산", "속리산"]; // String[]
+        let mountainU = mountain1.concat(mountain2); // 배열.concat(배열) : 배열끼리 합치기
+        console.log(mountainU);
+
+        let theName = ["홍길동", "장발장", "임꺽정", "로미오", "줄리엣"]; // String[]
+        let theNameS = theName.slice(2, 4); // 2 ~ 3 번째 인덱스의 값을 가져옴
+        console.log(theNameS);
+
+        let theProduct = ["냉장고", "컴퓨터", "선풍기", "밥솥", "스마트폰"]; // String[]
+        // 매개변수에 있는 구분자를 기준으로 데이터를 나눠서 가져옴
+        let joinData1 = theProduct.join(", "); // 냉장고, 컴퓨터, 선풍기, 밥솥, 스마트폰
+        let joinData2 = theProduct.join(" / "); // 냉장고 / 컴퓨터 / 선풍기 / 밥솥 / 스마트폰
+        console.log(joinData1);
+        console.log(joinData2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
