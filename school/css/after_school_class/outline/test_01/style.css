@@ -1,0 +1,44 @@
+* { margin: 0; padding: 0; }
+ul, li { list-style:  none; }
+
+body 
+{
+    font-size: 12px; 
+    font-family: "돋움";
+
+    margin: 10px;
+}
+
+a { color: blueviolet; }
+
+#container
+{
+    float: left;
+    width: 530px;
+    background-color: #fdf;
+}
+
+.menu
+{
+    width: 130px;
+    float: left;
+    padding: 10px;
+}
+
+.content
+{
+    width: 350px;
+    float: right;
+    border-left: 1px solid #333;
+    padding: 10px;
+}
+
+/* float의 단점 : 너비값과 높이값이 없어져서 다른 요소에 영향을 끼침 → 되도록이면 쓰지 않으려 함 */
+/* 해결법 */
+#footer { clear: both; /* float의 값이 모두 없어짐 -> 원래대로 돌아옴 */ }
+
+address
+{
+    font-style: none;
+    padding: 10px;
+}
