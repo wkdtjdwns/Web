@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let i = 10; // int
+        let num = 20; // int
+
+        function theTest()
+        {
+            let num = i + 200; // int
+            alert(num); // 지역변수를 출력함 (지역변수와 전역변수는 서로 상관하지 않음)
+        }
+        theTest();
+
+        function theFnc() {document.write(num);} // 전역변수를 출력함
+        theFnc();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
