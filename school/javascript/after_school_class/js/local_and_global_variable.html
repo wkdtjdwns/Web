@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        function theFnc()
+        {
+            let num; // int (지역변수)
+            num = 30;
+        }
+
+        theFnc();
+        console.log(num); // 변수 num은 theFnc() 함수의 지역변수이기 때문에 값을 불러올 수 없음
+        */
+
+        // 출력이 되게 하는 법
+        let num; // int (전역변수)
+        function theFnc() {num = 30;}
+
+        theFnc();
+        console.log(num); // 전역변수로 선언되어 있는 변수이기 때문에 값을 불러 올 수 잇음
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
