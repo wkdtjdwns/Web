@@ -1,0 +1,27 @@
+@charset "UTF-8";
+h1 { text-align: center; }
+caption { text-align: right; }
+span { color: red; font-weight: bold; }
+
+table
+{
+    width: 900px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table tr th
+{
+    width: 125px;
+    text-align: right;
+}
+
+table tr td { padding: 10px; }
+
+table tr th, td
+{
+    border: 1px solid black;
+    padding: 5px 15px;
+}
+
+button { float: right; margin: 5px; }
