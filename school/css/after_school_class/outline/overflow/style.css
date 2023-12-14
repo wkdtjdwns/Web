@@ -1,0 +1,39 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font: 16px "돋움";
+
+    /* <body> 태그와 <div> 태그 사이의 간격 */
+    margin: 10px;
+
+    /* #container의 부모가 body이기 때문에 #container도 visible 속성이 됨 */
+    overflow: visible;
+}
+
+#container
+{
+    width: 200px;
+
+    /* 높이값은 박스보다 작더라도 그대로 보여줌 */
+    height: 100px;
+
+    /* 위에 있는 너비, 높이값 확인용 */
+    border: 1px solid red;
+
+    /*
+        overflow
+            - visible : 박스를 넘어가도 데이터를 보여줌
+            - hidden : 박스를 넘어간 데이터는 감춤
+            - scroll : 박스를 넘어가든 안 넘어가든 스크롤바가 생김
+            - auto : 박스를 넘어갔을 때만 스크롤바가 생김
+            - ★inherit : 부모 요소의 속성값을 상속받음★ - 대부분 해당 속성을 사용함
+    */
+
+    overflow: inherit;
+
+}
