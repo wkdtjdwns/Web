@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let index = 0; // int
+
+        // 재귀함수를 이용하여 안녕하세요1 ~ 안녕하세요10까지 출력하시오.
+        function theTest()
+        {
+            index++;
+            document.write("안녕하세요" + index + "<br>");
+            if (index < 10) theTest();
+        }
+
+        theTest();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
