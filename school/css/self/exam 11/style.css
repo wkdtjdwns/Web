@@ -1,0 +1,12 @@
+.jb
+{
+    width: 100px;
+    height: 100px;
+    margin: 60px auto;
+    background: orange;
+
+    /* transition에도 Timing Function이 있음 */
+    transition: all ease 1s;
+}
+
+.jb:hover { transform: rotate(45deg); }
