@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        #box4
+        {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: relative;
+        }
+    </style>
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function()
+        {
+            $("#rightBtn").click(function()
+            {
+                // stop() = 남아있는 선입력을 없애서 연타를 방지해줌
+                $("#box4").stop().animate(
+                {
+                    // 위치 값을 누적합으로 해서 누를 때마다 계속 움직이게 하기
+                    left: "+=100px"
+                }, 500);
+            });
+
+            $("#leftBtn").click(function()
+            {
+                $("#box4").stop().animate(
+                {
+                    left: "-=100px"
+                }, 500);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="box4">박스4</div>
+    <p>
+        <button id="leftBtn">Left</button>
+        <button id="rightBtn">Right</button>
+    </p>
+</body>
+</html>
