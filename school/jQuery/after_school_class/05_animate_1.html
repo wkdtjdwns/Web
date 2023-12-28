@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        #box1, #box2, #box3
+        {
+            width: 100px;
+            height: 100px;
+            background: red;
+
+            /* body 안에서 위치 값을 가지기 위함 */
+            position: relative;
+        }
+    </style>
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function()
+        {
+            // animate = 주어진 시간 동안 적혀있는 코드를 실행함
+            // animate 사용법
+            // animate ( { 코드 }, 시간 );
+            $("#box1").animate(
+            {
+                left: "500px",
+                width: "200px",
+                height: "200px",
+                opacity: 0.5
+            }, 3000);
+
+            // 아래와 같이 animate 다음에 animate를 연속해서 사용할 수도 있음
+            // 원상태로 다시 돌려놓는 것도 가능함
+            $("#box2").animate(
+            {
+                left: "500px",
+                width: "200px",
+                height: "200px",
+                opacity: 0.5
+            }, 3000).animate(
+            {
+                left: 0,
+                width: "100px",
+                height: "100px",
+                opacity: 1
+            }, 3000);
+
+            $("#box3").animate(
+            {
+                left: "500px",
+                width: "200px",
+                height: "200px",
+                opacity: 0.5
+            }, 3000).animate(
+            {
+                left: 0,
+                width: "100px",
+                height: "100px",
+                opacity: 1
+            }, 3000).animate(
+            {
+                top: "500px",
+                width: "200px",
+                height: "200px",
+                opacity: 0.5
+            }, 3000).animate(
+            {
+                top: 0,
+                width: "100px",
+                height: "100px",
+                opacity: 1
+            }, 3000);
+        });
+    </script>
+</head>
+<body>
+    <div id="box1">박스1</div>
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+</body>
+</html>
