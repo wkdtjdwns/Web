@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { height: 5000px; }
+    </style>
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function()
+        {
+            // window가 스크롤 되었을 때
+            $(window).scroll(function()
+            {
+                // 스크롤 값을 받아옴
+                let sct = $(window).scrollTop(); // int (평균 설정 기준)
+                console.log(sct);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
