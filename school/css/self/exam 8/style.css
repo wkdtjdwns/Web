@@ -1,0 +1,43 @@
+div
+{
+    position: absolute;
+    left: 100px;
+    width: 100px;
+    height: 50px;
+    margin-left: 50px;
+    background-color: #000;
+    color: #fff;
+
+    /* infinite : 무한 반복 */
+    animation: compare 2s infinite alternate;
+}
+
+.ease
+{
+    /* ease : 시작은 속도로 움직이다가 마지막은 느린 속도로 움직임 */
+    animation-timing-function: ease;
+}
+
+/*
+    ease-in : 시작은 느린 속도로 움직이다가 마지막에 기본 속도로 움직임 (튕기는 것처럼 보임)
+    ease-out : 시작은 기본 속도로 움직이다가 마지막에 느린 속도로 움직임 (튕기는 것처럼 보임
+*/
+
+.ease_in_out
+{
+    top: 100px;
+
+    /* ease-in-out : 일정한 속도로 움직임 */
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes compare
+{
+    /*
+        단위
+        - from = 0%와 같음
+        - to = 100%와 같음
+    */
+    from { left: 100px; }
+    to { left: 300px; }
+}
