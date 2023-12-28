@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { height: 5000px; }
+
+        /* 모든 box에 공통으로 적용함 */
+        .box
+        {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 각각의 box에 각각 적용함 */
+        .box1
+        {
+            background-color: red;
+
+            /* body로부터 자신의 위치를 마음대로 설정 */
+            position: absolute;
+            top: 1000px;
+            left: -500px;
+            transition: all 0.6s;
+        }
+
+        .box2
+        {
+            background-color: blue;
+
+            /* body로부터 자신의 위치를 마음대로 설정 */
+            position: absolute;
+            top: 2000px;
+
+            /* 아직 안 배운 개념이 있어서 좌우 스크롤로 대체함 */
+            right: -500px;
+            transition: all 0.6s;
+        }
+
+        /* box1.on -> box1의 요소중 'on' 클래스를 가진 요소 */
+        .box1.on { left: 500px; }
+        .box2.on { right: 500px; }
+    </style>
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function()
+        {
+            $(window).scroll(function()
+            {
+                let sct = $(window).scrollTop(); // int (평균 설정 기준)
+                console.log(sct);
+
+                // 스크롤 값을 판단해서 그에 맞는 코드를 실행함
+                if (sct>700) { $(".box1").addClass("on"); }
+                if (sct>1400) { $(".box2").addClass("on"); }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--
+        class 값 중첩
+        서로 동일한 옵션은 box로 접근하고
+        서로 다른 옵션은 box1, box2로 접근함
+    -->
+
+    <!--
+        자동완성
+        div.box.box1
+        div.box.box2
+    -->
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+</html>
