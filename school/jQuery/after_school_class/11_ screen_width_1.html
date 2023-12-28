@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; }
+    </style>
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function()
+        {
+            // 화면 크기 찾기
+            let w = $(window).width(); // int
+            let h = $(window).height(); // int
+
+            $("#box1 span").text(w);
+            $("#box2 span").text(h);
+        });
+    </script>
+</head>
+<body>
+    <!--
+        단축키
+        (div#box$>span)*2
+    -->
+    <div id="box1">현재 화면의 넓이는? <span>0</span></div>
+    <div id="box2">현재 화면의 높이는? <span>0</span></div>
+</body>
+</html>
