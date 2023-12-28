@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; }
+
+        /* 공통 클래스 */
+        .box
+        {
+            width: 100%;
+
+            /* 세로는 %를 사용 못해서 임의의 값을 적용함 */
+            height: 500px;
+        }
+
+        .box1 { background-color: red; }
+        .box2 { background-color: green; }
+        .box3 { background-color: blue; }
+    </style>
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function()
+        {
+            let h = $(window).height(); // int
+
+            // 공통 클래스
+            // 세로를 화면의 세로 크기로 맞춰서
+            // 한 스크롤에 모두 들어오도록 만듦
+            $(".box").height(h);
+        });
+    </script>
+</head>
+<body>
+    <!-- div.box.box$*3 -->
+    <div class="box box1">BOX1</div>
+    <div class="box box2">BOX2</div>
+    <div class="box box3">BOX3</div>
+</body>
+</html>
