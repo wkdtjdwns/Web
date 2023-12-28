@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        ul, li { list-style: none; }
+        body { font-family: arial; }
+        a { text-decoration: none; color: #000; }
+
+        #nav
+        {
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        #nav .title
+        {
+            height: 36px;
+            background-color: #390;
+            line-height: 36px;
+            border-top: 1px dotted #fff;
+            text-indent: 10px;
+
+            /* 마우스를 올리면 마우스가 손가락 표시로 바뀜 (클릭하는 듯한 느낌을 위함) */
+            cursor: pointer;
+        }
+
+        #nav .sub li
+        {
+            height: 36px;
+            line-height: 36px;
+            background-color: #cf9;
+        }
+
+        #nav .sub li a
+        {
+            /*
+                <a> 태그는 글씨를 클릭해야만 실행이 됨
+                -> 바탕을 클릭해도 실행되도록 하게 함
+            */
+
+            /*
+                인라인 요소인 <a> 태그를 블록 요소로 바꿔서 박스 전체를 사용하게 함
+                -> 바탕을 클릭해도 <a> 태그를 클릭한 판정이 됨
+             */
+            display: block;
+        }
+
+        #nav .sub li:hover { background-color: #cf0; }
+    </style>
+    <script src="js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function()
+        {
+            // .sub를 가진 요소를 감춤
+            $(".sub").css("display", "none");
+
+            // #nav 아래에 있는 0번째 li의 자식 증 .sub를 가진 요소를 보여줌
+            $("#nav li").eq(0).children(".sub").css("display", "block")
+        });
+    </script>
+</head>
+<body>
+    <!--
+        ul#nav>li>div.title+ul.sub>(li>a[href="#"])*5
+        적용하고 나서 수정함
+    -->
+    <ul id="nav">
+        <li>
+            <div class="title">MainMenu1</div>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="title">MainMenu2</div>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="title">MainMenu3</div>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+                <li><a href="#">sub4</a></li>
+                <li><a href="#">sub5</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="title">MainMenu4</div>
+            <ul class="sub">
+                <li><a href="#">sub1</a></li>
+                <li><a href="#">sub2</a></li>
+                <li><a href="#">sub3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
