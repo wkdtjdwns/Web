@@ -1,0 +1,40 @@
+.flower
+{
+    width: 100px;
+    height: 100px;
+
+    /*
+        -webkit
+        -> 모든 브라우저의 엔진을 통합해줌
+        -> chrome과 edge가 아닌 다른 브라우저에서 실행해도
+        -> chrome이나 edge에서 돌아가는 것처럼 실행함
+        -> -webkit은 안 써도 됨
+
+        'ms', 'moz', 'o'도 있음
+    */
+    -webkit-animation: flower 3s linear infinite;
+}
+
+/*
+    @keyframes
+    -> transition과 비슷하지만
+    -> keyframes은 시간을 지정 (n%)해서 실행하며
+    -> 최대 값에 도달한 뒤에 최소 값으로 다시 돌아옴
+    -> 쉽게 말해서 애니매이션이 만들어지는 곳임
+    -> 또한 모든 css의 기능을 사용해서 만들 수 있음
+
+    -> 하지만 같은 내용의 다른 keyframes를 사용할 수 없음 (요소 1개당 @keyframes 1개씩만 사용 가능)
+        -> @keyframes flower, stone : 오류 생김
+        -> 아예 새로운 @keyframes을 만들어서 내용을 복붙해야 함
+*/
+@keyframes flower
+{
+    /*
+        deg : 각도
+        n% : timeline (100%를 넘어서도 사용할 수 있고 여러 개를 사용할 수도 있음)
+        rotate() : 요소를 회전시킴 (rotateX(), rotateY(), rotateZ()처럼 구분해서 사용 가능)
+    */
+    0% { -webkit-transform: rotate(0deg); }
+
+    100% { -webkit-transform: rotate(360deg); }
+}
