@@ -1,88 +1,74 @@
 @charset "UTF-8";
-* { padding: 0; margin: 0; }
 
-body
+#container
 {
-    width: 1100px;
+    width: 960px;
+    padding: 20px;
+    margin: 0 auto;
     border: 1px solid red;
+    font-family: 'Nanum Myeongjo', serif;
 }
 
 header
 {
     padding: 20px;
-    margin: 30px;
-    background-color: darkseagreen;
+    margin-bottom: 20px;
     border: 1px solid green;
+    background-color: #8cd98c;
 }
+
+a { color: #206020; }
 
 section
 {
-    width: 660px;
-    margin: 30px;
-    border: 1px solid gray;
-}
-
-article h1
-{
-    margin: 15px;
-    padding-top: 15px;
-}
-
-nav li
-{
-    display: inline-block;
-    margin-left: 50px;
     padding: 20px;
-}
-
-.flower
-{
-    animation: flower linear infinite 3s;
-    width: 100px;
-    height: 100px;
-}
-
-@-webkit-keyframes flower
-{
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-#t01 { margin: 10px; }
-
-#t01 tr:nth-child(even) { background-color: lightblue; }
-
-#t01 tr:nth-child(odd) { background-color: deepskyblue; }
-
-#t01 tr:first-child
-{
-    background-color: blue;
-    color: #fff;
+    width: 620px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    float: left;
 }
 
 aside
 {
-    position: absolute;
-    left: 750px;
-    bottom: 670px;
-    width: 275px;
-    float: left;
-    background-color: lightgrey;
+    width: 220px;
+    padding: 20px;
+    margin-bottom: 20px;
     border: 1px solid gray;
-}
-
-aside p { margin: 30px; }
-
-article div p
-{
-    border-color: yellow;
-    margin: 7px;
-    display: block;
+    float: right;
+    background-color: #d9d9d9;
 }
 
 footer
 {
-    padding: 25px;
-    margin: 30px;
+    padding: 20px;
     border: 1px solid gray;
+    clear: both;
+}
+
+li { display: inline; }
+
+li a { padding: 16px; }
+
+table#t01 tr:nth-child(even) { background-color: #e6f0ff; }
+
+table#t01 tr:nth-child(odd) { background-color: #99c2ff; }
+
+table#t01 th
+{
+    background-color: #0000ff;
+    color: white;
+}
+
+.flower 
+{
+    width: 100px;
+    height: 100px;
+    animation: flower 3s linear infinite;
+}
+
+@keyframes flower
+{
+    0% { -webkit-transform: rotate(0deg); }
+
+    100% { -webkit-transform: rotate(360deg); }
 }
