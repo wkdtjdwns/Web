@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- HTML과 CSS 및 JS 같이 사용하기 -->
+    <style>
+        * {margin: 0; padding: 0;}
+        img
+        {
+            vertical-align: top;
+            border: 0;
+        }
+        #galleryWrap
+        {
+            width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+        #galleryWrap img
+        {
+            vertical-align: middle;
+        }
+
+    </style>
+    <script>
+        let index = 1 // int
+        function nextGallery()
+        {
+            // getElementById() -> id에 따라서 요소를 가져옴 (id가 "gallery"인 것의 요소를 가져옴)
+            // .src= ~~~ -> src라는 요소를 가져와서 바꿈
+            index = index >= 7 ? index = 1 : index += 1;
+
+            document.getElementById("gallery").src="images/img" + index + ".jpg";
+            return false;
+        }
+
+        function prevGallery()
+        {
+            index = index <= 1 ? index = 7 : index -= 1;
+
+            document.getElementById("gallery").src="images/img" + index + ".jpg";
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div id="galleryWrap">
+        <h1>이미지 넘기기</h1>
+        <p>
+            <a href="#" onclick="return prevGallery()">
+                <img src="images/left_btn.png" alt="이전 그림">
+            </a>
+            <img src="images/img1.jpg" alt="갤러리 그림" id="gallery">
+            <a href="#" onclick="return nextGallery()">
+                <img src="images/right_btn.png" alt="다음 그림">
+            </a>
+        </p>
+    </div>
+</body>
+</html>
