@@ -1,0 +1,49 @@
+div
+{
+    /* absolute : 절대 위치 (마음대로 이동 가능) */
+    position: absolute;
+
+    left: 100px;
+    width: 100px;
+    height: 50px;
+    margin-left: -50px;
+    background-color: #000;
+    color: #fff;
+
+    /* 실행시킬 애니매이션 이름 */
+    animation-name: ecyce;
+    
+    /* 실행에 걸리는 시간 */
+    animation-duration: 2s;
+    animation-duration: leaner;
+
+    /* 애니매이션 반복 횟수 (멈추는 지점 기준) */
+    animation-iteration-count: 3;
+
+    /*
+        애니매이션 방향
+        - normal : 애니메이션의 방향을 기본값으로 설정함
+        - reverse : 애니메이션 움직임의 방향을 역방향으로 설정함
+        - alternate : 앞으로 갔다가 뒤로 되돌아 오게 함
+        - alternate-reverse : 뒤로 갔다가 앞으로 되돌아 오게 함
+        - inherit : 애니메이션 움직임을 상위 요소한테 상속받음
+    */
+    animation-direction: alternate;
+
+    /*
+        애니매이션이 끝난 후의 상태를 설정함 
+        - none : 애니메이션이 끝난 후 상태를 설정하지 않음 (backwards와 같은 결과)
+        - forwards : 그 지점에 가만히 있음
+        - backwards : 애니메이션이 끝난 후 시작점으로 돌아옴
+        - both : 애니메이션이의 앞 뒤 결과를 조합하여 설정함
+        - inherit : 애니메이션의 상태를 상위 요소한테 상속받음
+    */
+    animation-fill-mode: forwards;
+}
+
+@keyframes ecyce
+{
+    0% { left: 100px; }
+
+    100% { left: 300px; }
+}
