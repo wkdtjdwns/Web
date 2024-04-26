@@ -10,7 +10,7 @@ div
     /* border-radius : 테두리를 둥글게 함 */
     border-radius: 50px;
 
-    animation: move 1s;
+    animation: move 2s;
 }
 
 /* @-webkit-keyframes 도 있음 */
