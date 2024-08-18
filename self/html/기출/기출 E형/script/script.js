@@ -26,18 +26,14 @@ $(function () {
     });
 
     // 이미지 슬라이드(페이드 효과)
-    let currentIndex = 0; //현재 이미지
+    let currentIndex = 0; // 현재 이미지
 
-    setInterval(function () { //3초에 한번씩 실행
+    setInterval(function () { // 3초에 한번씩 실행
         let nextIndex = (currentIndex + 1) % 3; // 1 2 0 1 2 무한반복
 
-        $(".slider").eq(currentIndex).fadeOut(800); //첫번째 이미지 사라짐
-        $(".slider").eq(nextIndex).fadeIn(800); //두번째 이미지 나타남
+        $(".slider").eq(currentIndex).fadeOut(800); // 첫번째 이미지 사라짐
+        $(".slider").eq(nextIndex).fadeIn(800); // 두번째 이미지 나타남
 
-        currentIndex = nextIndex; //두번째 인덱값을 현재 인덱값에 저장
+        currentIndex = nextIndex; // 두번째 인덱값을 현재 인덱값에 저장
     }, 3000);
 });
-
-
-
-
