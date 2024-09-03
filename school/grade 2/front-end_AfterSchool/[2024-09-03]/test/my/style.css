@@ -1,0 +1,36 @@
+a { text-decoration: none; color: #000; }
+
+#menu li {
+    list-style: none;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+#main
+{
+    width: 750px;
+    clear: both;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 14pt;
+    background-color: skyblue;
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+table td {
+    padding: 5px 25px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#main li {
+    list-style: url(front/logo.png);
+}
