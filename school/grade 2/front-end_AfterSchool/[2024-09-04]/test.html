@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 1pc;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        /* .one {
+            전체의 크기를 우선시 함.
+            box-sizing: border-box;
+        }
+
+        .two {
+            콘텐츠의 크기를 우선시 함.
+            box-sizing: content-box;
+        } */
+
+        .one {
+            background-color: red;
+            float: left; /* .one이 위로 뜨게 됨. */
+        }
+
+        .two {
+            background-color: orange;
+            float: left; /* .two가 위로 뜨게 되고, .one 옆에 붙음 */
+        }
+
+        .three {
+            background-color: yellow;
+            float: left; /* .three가 위로 뜨게 되고, .two 옆에 붙음 */
+        }
+
+        .boomo {
+            width: 500px;
+            height: 200px;
+            background-color: green;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="boomo">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+</body>
+</html>

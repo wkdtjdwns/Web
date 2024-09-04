@@ -1,0 +1,74 @@
+<!DOCTYPE html> <!-- 이 문서가 HTML5 버전이라는 것을 선언함. -->
+<html lang="ko">
+    <!-- 
+        lang 속성: 번역과 연관이 있음.
+        en일 때에는 실행했을 때 "번역" 창이 뜻게 됨.
+    -->
+<head> <!-- 세팅하는 곳 -->    
+    <!-- meta: 세팅 -->
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 반응형 웹에 대한 것 -->
+    <title>Hello World</title> <!-- 탭의 제목 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <!-- 페이지에 보여지는 곳 -->
+    <!--
+        <img> 태그
+            - [src] 속성에 이미지 경로를 지정해주면 그 경로에 있는 이미지를 출력함. 
+            - [alt] 속성: 이미지가 엑박일 때(없을 때) 나올 메시지
+    -->
+    <img src="imgs/main_img.png" alt="이미지 null값">
+
+    <!--
+        <ul> 태그: unordered list -> 순서없는 리스트, 요소들을 관리하기 위해 리스트를 만듦. (배열과 비슷함)
+        <li> 태그: list item -> 리스트 요소, ol, ul 등 리스트들의 요소
+        <a> 태그: anchor(닻): [href] 속성을 이용해 링크를 걺.
+    -->
+    <ul>
+        <li><a href="#">학교소개 |</a></li>
+        <li><a href="#">학과소개 |</a></li>
+        <li><a href="#">입학안내 |</a></li>
+        <li><a href="#">학교생활 |</a></li>
+        <li><a href="#">열린학교 |</a></li>
+    </ul>
+
+    <!-- <h1> ~ <h6>
+        - 문서의 머리 역할, 숫자가 작아질수록 폰트가 작아지고 기본적으로 글씨가 크고, 진함.
+        - HTML 문서를 열 때 h태그부터 탐색함. (숫자가 작아질수록 나중에 탐색함.)
+    -->
+    <h1 class="클래스" id="아이디">+ 학교소개</h1>
+
+    <!-- <ol> 태그: ordered list -> 순서가 있는 리스트, 요소들을 관리하기위해 리스트를 만듦. (배열과 비슷함) -->
+    <ol>
+        <li>
+            <h3>건학이념</h3>
+            <div>
+                <table>
+                    <tr>
+                        <td>설립자훈</td>
+                        <td>대망과 신념을 지닌 인간상 구현</td>
+                    </tr>
+                    <tr>
+                        <td>교훈</td>
+                        <td>성실한 사람, 실력 있는 사람, 생산적인 사람</td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+
+        <li>
+            <h3>학교상징</h3>
+            <ul class="symbol">
+                <li>교화 : 철쭉 - 사랑의 기쁨</li>
+                <li>교목 : 은행나무 - 용기, 진취적임, 풍요로운 결실</li>
+                <li>교조 : 독수리 - 도전정신</li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>오시는길</h3>
+            <img src="imgs/map.png" alt="지도가안보여">
+        </li>
+    </ol>
+</body>
+</html>
