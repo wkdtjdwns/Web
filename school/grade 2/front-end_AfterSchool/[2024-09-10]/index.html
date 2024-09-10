@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 1pc;
+            background-color: gold;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* .one {
+            전체의 크기를 우선시 함.
+            box-sizing: border-box;
+        }
+
+        .two {
+            콘텐츠의 크기를 우선시 함.
+            box-sizing: content-box;
+        } */
+
+        .one {
+            background-color: red;
+            /* float: left; .one이 위로 뜨게 됨. */
+
+            position: absolute; /* float: left;의 역할을 함. */
+            /* position을 정했으니 좌표를 찍어줌. */
+            top: 48px;
+            left: 32px;
+        }
+
+        .two {
+            background-color: orange;
+            float: left; /* .two가 위로 뜨게 되고, .one 옆에 붙음 */
+
+            position: absolute; /* float: left;의 역할을 함. */
+            top: 48px;
+            left: 205px;
+        }
+
+        .three {
+            background-color: yellow;
+            float: left; /* .three가 위로 뜨게 되고, .two 옆에 붙음 */
+
+            position: absolute; /* float: left;의 역할을 함. */
+            top: 48px;
+            left: 380px;
+        }
+
+        .boomo {
+            width: 500px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="boomo">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+</body>
+</html>
