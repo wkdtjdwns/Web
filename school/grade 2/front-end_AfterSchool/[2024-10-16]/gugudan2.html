@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>구구단 구하기(0이면 초기화)</h1>
+
+    <input type="number" id="dan">
+    <input type="button" value="계산" onclick="gugudan()"><hr>
+
+    <div id="result"></div>
+
+    <script>
+        function gugudan() {
+            let n = document.getElementById("dan").value;
+            let result = document.getElementById("result");
+            if (n == 0) {
+                result.innerHTML = '';
+            } else {
+                result.innerHTML += `<h2>${n}단 출력</h2>`;
+                for (let i = 1; i <= 9; i++) {
+                    result.innerHTML += `<span>${n} * ${i} = ${n * i}<br></span>`;
+                }
+            }
+        }
+        
+        /* let n;
+        while (true) {
+            n = parseInt(window.prompt("몇단?"));
+            if (n === 0) {
+                break;
+            }
+
+            document.write("<h1>" + n +  "단</h1>");
+            for (let i = 1; i <= 9; i++) {
+                document.write(n + " * " + i + " = " + (n * i) + "<br>");
+            }
+        } */
+    </script>
+</body>
+</html>
