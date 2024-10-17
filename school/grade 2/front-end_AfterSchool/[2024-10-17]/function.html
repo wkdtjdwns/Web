@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="a">
+    <input type="number" id="b"><br>
+    <input type="number" id="result">
+    <input type="button" value="plus" onclick="add()">
+
+    <script>
+        /* 
+            여러가지 함수식
+            - 아래의 함수들을 모두 똑같은 함수임. (이름만 다름)
+            - 2번부터는 호이스팅을 사용할 수 있음.
+            - 3번째 함수식을 가장 많이 씀
+
+            1. function gugudan() {}
+            2. let gugudan2 = function() {}
+            3. let gugudan3 = () => {}
+        */
+
+        let add = () => {
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            
+            document.getElementById('result').value = a + b;
+        }
+    </script>
+</body>
+</html>
