@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인창</title>
+</head>
+    <h1 style="color: rgb(26, 191, 80);">NAVER</h1>
+    <input type="text" id="id" placeholder="Username"><br>
+    <input type="password" id="pw" placeholder="Password"><br>
+    <input type="button" value="Sign in" onclick="logIn()">
+
+    <script>
+        const id = "곽권";
+        const pw = 3333;
+
+        function logIn() {
+            let inputId = document.getElementById("id").value;
+            let inputPw = document.getElementById("pw").value;
+
+            console.log(`${inputId}, ${inputPw}`);
+
+            if (inputId != id) {
+                alert("아이디부터가 틀려먹음 ㅉㅉ");
+                window.location.reload();
+            }
+
+            else if (inputPw != pw) {
+                alert("비번을 틀려먹음 ㅉㅉ");
+                document.getElementById("pw").value = '';
+            }
+
+            else {
+                alert("로그인 성공 ㅊㅊ");
+                window.location.href = 'https://limbuscompany.kr/';
+            }
+        }
+    </script>
+</body>
+</html>
