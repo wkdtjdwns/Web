@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>다크모드 만들기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <img src="imgs/main_img.png" alt="main">
+
+            <div class="mode">
+                <label for="모드변경">모드변경</label>
+                <input type="checkbox" value="다크모드" id="모드변경">
+            </div>
+        </header>
+
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <img src="imgs/logo.png" alt="로고">
+                </a>
+            </div>
+    
+            <!-- ul>(li>a[href="#"])*3 -->
+            <!-- ul>li*3>a[href="#"] -->
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">School</a></li>
+                <li><a href="#">Major</a></li>
+                <li><a href="#">Etc</a></li>
+            </ul>
+        </nav>
+    
+        <section>
+            <h2><a href="#">Home</a></h2>
+    
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+                Incidunt quibusdam iusto, alias est perferendis aut ipsa itaque<br>
+                numquam officia iste, explicabo velit. Optio,<br>
+                quod dignissimos praesentium consequuntur eaque ad ab!
+            </p>
+        </section>
+    </div>
+
+
+    <script>
+        const checkBox = document.getElementById("모드변경");
+        const nav = document.getElementsByTagName("nav")[0];
+
+        checkBox.addEventListener("change", function() {
+            if (this.checked) {
+                nav.style.backgroundColor = "black";
+                nav.style.color = "white";
+            } else {
+                nav.style.backgroundColor = "#33333333";
+                nav.style.color = "black";
+            }
+        });
+    </script>
+</body>
+</html>
