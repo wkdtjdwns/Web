@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>다크모드 만들기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <img src="imgs/main_img.png" alt="main">
+
+            <div class="mode">
+                <label for="모드변경">모드변경</label>
+                <input type="checkbox" value="다크모드" id="모드변경">
+            </div>
+        </header>
+
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <img src="imgs/logo.png" alt="로고">
+                </a>
+            </div>
+    
+            <!-- ul>(li>a[href="#"])*3 -->
+            <!-- ul>li*3>a[href="#"] -->
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">School</a></li>
+                <li><a href="#">Major</a></li>
+                <li><a href="#">Etc</a></li>
+            </ul>
+        </nav>
+    
+        <section>
+            <h2><a href="#">Home</a></h2>
+
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+                Incidunt quibusdam iusto, alias est perferendis aut ipsa itaque<br>
+                numquam officia iste, explicabo velit. Optio,<br>
+                quod dignissimos praesentium consequuntur eaque ad ab!
+            </p>
+        </section>
+    </div>
+
+
+    <script>
+        const checkBox = document.getElementById("모드변경");
+        const body = document.body;
+        const nav = document.getElementsByTagName("nav")[0];
+        const li = document.getElementsByTagName("li");
+        const section = document.getElementsByTagName("section")[0];
+        const h2 = document.getElementsByTagName("h2")[0];
+        const p = document.getElementsByTagName("p")[0];
+
+        checkBox.addEventListener("change", function() {
+            if (checkBox.checked) {
+                body.style.backgroundColor = "black";
+
+                nav.style.backgroundColor = "#44444450";
+                nav.style.color = "white";
+
+                for (let i = 0; i < li.length; i++) {
+                    li[i].style.backgroundColor = "#555555";
+                    li[i].children[0].style.color = "gold";
+                }
+
+                section.style.backgroundColor = "#dbddf750";
+
+                h2.children[0].style.color = "gold";
+
+                p.style.backgroundColor = "#372D2B";
+                p.style.color = "#FAE5AC";
+            } else {
+                body.style.backgroundColor = "white";
+
+                nav.style.backgroundColor = "#33333333";
+                nav.style.color = "black";
+
+                for (let i = 0; i < li.length; i++) {
+                    li[i].style.backgroundColor = "#343477";
+                    li[i].children[0].style.color = "white";
+                }
+
+                section.style.backgroundColor = "#dbddf788";
+                section.style.color = "black";
+
+                h2.children[0].style.color = "black";
+
+                p.style.backgroundColor = "beige";
+                p.style.color = "black";
+            }
+        });
+    </script>
+</body>
+</html>
