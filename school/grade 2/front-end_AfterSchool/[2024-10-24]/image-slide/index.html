@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="imgBox">
+        <img src="imgs/img_1.jpg" alt="이미지" id="image">
+    </div>
+
+    <div class="btnBox">
+        <input type="button" value="이전" onclick="prev()">
+        <input type="button" value="다음" onclick="next()">
+    </div>
+
+    <script>
+        let index = 0;
+        let imgs = [
+            "imgs/img_1.jpg",
+            "imgs/img_2.jpg",
+            "imgs/img_3.jpg",
+            "imgs/img_4.jpg",
+            "imgs/img_5.jpg"
+        ];
+        function prev() {
+            index--;
+            document.getElementById("image").setAttribute("src", imgs[index])
+        }
+
+        function next() {
+            index++;
+            document.getElementById("image").setAttribute("src", imgs[index])
+        }
+    </script>
+</body>
+</html>
