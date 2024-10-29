@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slideBox">
+        <div class="box">
+            <img src="imgs/img_0.jpg" alt="img0">
+            <img src="imgs/img_1.jpg" alt="img1">
+            <img src="imgs/img_2.jpg" alt="img2">
+            <img src="imgs/img_3.jpg" alt="img3">
+            <img src="imgs/img_4.jpg" alt="img4">
+            <img src="imgs/img_5.jpg" alt="img5">
+        </div>
+    </div>
+
+    <div class="btnBox">
+        <input type="button" value="Next" onclick="next()">
+    </div>
+
+    <script>
+        let index = 0;
+        let next = () => {
+            index++;
+
+            if (index >= 6) {
+                index = 0;
+            }
+
+            let box = document.getElementsByClassName("box")[0];
+            box.style.transform = `translateX(${index * -631}px)`;
+        }
+    </script>
+</body>
+</html>
