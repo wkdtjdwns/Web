@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+* { /* aserisk */
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.slideBox {
+    width: 640px;
+    height: 426px;
+    font-size: 0;
+    box-sizing: border-box;
+    border: 5px solid red;
+    overflow: hidden;
+}
+
+.box {
+    width: calc(631px * 6);
+    transition: all 1.5s;
+}
+
+img {
+    width: 631px;
+    height: 416px;
+}
+
+.btnBox {
+    text-align: center;
+}
+
+input {
+    margin: 10px;
+    padding: 5px 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
