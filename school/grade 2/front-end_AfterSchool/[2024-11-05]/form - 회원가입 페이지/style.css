@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #333;
+    box-sizing: border-box;
+}
+
+div {
+    width: 500px;
+    height: 44px;
+    line-height: 44px;
+    /* background-color: #333; */
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 140px;
+}
+
+.input {
+    width: calc(100% - 140px);
+}
