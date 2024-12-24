@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+        // $(선택자).함수()
+        $(document).ready(function(){
+            setInterval(function(){
+                $('.imgBox').animate({marginLeft: "0"})
+                $('.imgBox').delay(1200);
+                $('.imgBox').animate({marginLeft: "-100%"})
+                $('.imgBox').delay(1200);
+                $('.imgBox').animate({marginLeft: "-200%"})
+                $('.imgBox').delay(1200);
+            }, 2000)
+        })
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+        
+        </header>
+    
+        <div class="contents">
+    
+        </div>
+    
+        <div class="slide">
+            <div class="imgBox">
+                <img src="imgs/slide1.jpg" alt="slideImg1">
+                <img src="imgs/slide1.jpg" alt="slideImg2">
+                <img src="imgs/slide1.jpg" alt="slideImg3">
+            </div>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
